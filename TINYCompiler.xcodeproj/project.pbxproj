@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		12BF7AE61CC4ACE700497618 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12BF7AE51CC4ACE700497618 /* main.cpp */; };
+		12BF7AF11CC4B25600497618 /* scan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12BF7AEF1CC4B25600497618 /* scan.cpp */; };
+		12BF7AF41CC4C36E00497618 /* util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12BF7AF31CC4C36E00497618 /* util.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,11 @@
 /* Begin PBXFileReference section */
 		12BF7AE21CC4ACE700497618 /* TINYCompiler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TINYCompiler; sourceTree = BUILT_PRODUCTS_DIR; };
 		12BF7AE51CC4ACE700497618 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		12BF7AEE1CC4AD9000497618 /* globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globals.h; sourceTree = "<group>"; };
+		12BF7AEF1CC4B25600497618 /* scan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scan.cpp; sourceTree = "<group>"; };
+		12BF7AF21CC4B2BB00497618 /* scan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scan.h; sourceTree = "<group>"; };
+		12BF7AF31CC4C36E00497618 /* util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = util.cpp; sourceTree = "<group>"; };
+		12BF7AF51CC4C37A00497618 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,11 @@
 			isa = PBXGroup;
 			children = (
 				12BF7AE51CC4ACE700497618 /* main.cpp */,
+				12BF7AEE1CC4AD9000497618 /* globals.h */,
+				12BF7AEF1CC4B25600497618 /* scan.cpp */,
+				12BF7AF21CC4B2BB00497618 /* scan.h */,
+				12BF7AF31CC4C36E00497618 /* util.cpp */,
+				12BF7AF51CC4C37A00497618 /* util.h */,
 			);
 			path = TINYCompiler;
 			sourceTree = "<group>";
@@ -118,7 +130,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12BF7AF11CC4B25600497618 /* scan.cpp in Sources */,
 				12BF7AE61CC4ACE700497618 /* main.cpp in Sources */,
+				12BF7AF41CC4C36E00497618 /* util.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,14 +223,14 @@
 		12BF7AEA1CC4ACE700497618 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TINYCompiler;
 			};
 			name = Debug;
 		};
 		12BF7AEB1CC4ACE700497618 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TINYCompiler;
 			};
 			name = Release;
 		};
