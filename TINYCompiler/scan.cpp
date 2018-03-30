@@ -29,7 +29,7 @@ static char getNextChar(void){
         lineno++;
         if (fgets(lineBuf, BUFLEN-1, source)){
             if (EchoSource) fprintf(listing, "%4d: %s", lineno, lineBuf);
-            bufsize = strlen(lineBuf);
+            bufsize = (int)strlen(lineBuf);
             linepos = 0;
             return lineBuf[linepos++];
         }

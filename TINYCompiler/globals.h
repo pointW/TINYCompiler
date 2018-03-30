@@ -54,12 +54,29 @@ typedef enum{
     Void, Integer, Boolean
 } ExpType;
 
+#define MAXCHILDREN 3
+
+typedef struct treeNode
+{
+    struct treeNode *child[MAXCHILDREN];
+    struct treeNode *sibling;
+    int lineno;
+    NodeKind nodeKind;
+    union {StmtKind stmt; ExpKind exp;} kind;
+    union {TokenType op; int val; char *name;} attr;
+    ExpType type; 
+} TreeNode;
+
+
+
 extern int EchoSource;
 
 extern int TraceScan;
 
+extern int TraceParse;
 
-#define MAXCHILDREN 3
+extern int Error;
+
 
 
 #endif /* globals_h */

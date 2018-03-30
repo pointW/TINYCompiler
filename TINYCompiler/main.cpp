@@ -9,6 +9,8 @@
 #include <iostream>
 #include "globals.h"
 #include "scan.h"
+#include "util.h"
+#include "parse.hpp"
 
 int lineno = 0;
 FILE* source;
@@ -16,7 +18,10 @@ FILE* listing;
 FILE* code;
 
 int EchoSource = TRUE;
-int TraceScan = TRUE;
+int TraceScan = FALSE;
+int TraceParse = TRUE;
+
+int Error = FALSE;
 
 
 int main(int argc, const char * argv[]) {
@@ -35,6 +40,8 @@ int main(int argc, const char * argv[]) {
     }
     listing = stdout;
     fprintf(listing, "\nTINY COMPILATION: %s\n", pgm);
-    while (getToken()!=ENDFILE);
+//    while (getToken()!=ENDFILE);
+    TreeNode *syntaxTree = parse();
+    printTree(syntaxTree);
     return 0;
 }
